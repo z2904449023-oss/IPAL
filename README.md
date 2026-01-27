@@ -217,7 +217,7 @@ This pipeline is used in my research on narrative-driven skewness risk premia an
 2. Set your API key and (if needed) base URL for an OpenAI-compatible endpoint:
 
   export OPENAI_API_KEY="YOUR_API_KEY"
-  # Optional if using a non-default base URL:
+  Optional if using a non-default base URL:
   export OPENAI_BASE_URL="https://api.deepseek.com"
 
 3. Prepare your Factiva/Dow Jones exports (PDF/RTF/CSV) in a directory, e.g. data/factiva_raw/.
