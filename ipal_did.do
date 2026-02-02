@@ -1,4 +1,4 @@
-use "/Users/zhouxinyi/Desktop/PKU/term paper/Data for Student Term Paper/Panel Data(China Provincial)2.dta",clear
+* Data path example: use "/Users/zhouxinyi/Desktop/PKU/term paper/Data for Student Term Paper/Panel Data(China Provincial)2.dta",clear
 *======================================================
 * 1. Inspect basic dataset characteristics and Check missing values
 *======================================================

@@ -17,11 +17,7 @@ The analysis uses province-level annual panel data and implements:
 
 ## **Data**
 
-The dataset is located at:
-
-```
-/Users/zhouxinyi/Desktop/PKU/term paper/Data for Student Term Paper/Panel Data(China Provincial)2.dta
-```
+Due to privacy policy, data is not public. Once you create your own data and add the path at the right place, the code could work.
 
 ### **Key variables**
 
