@@ -10,9 +10,11 @@ This project evaluates the causal impact of the Belt and Road Initiative (BRI) o
 * **Randomization inference with 100 simulations** for both placebo types
 * **Distributional inference for tau₀** (the contemporaneous treatment effect)
 
-The code is written in Stata and is fully reproducible.
+The code is written in Stata and R and is fully reproducible.
 
 ---
+
+## **Stata**
 
 ## **Dataset**
 
@@ -200,6 +202,42 @@ ssc install event_plot, replace
 
 The code uses fixed random seeds (`set seed 2024`), ensuring full replicability.
 
+---
+
+## **R**
+
+---
+Purpose:
+   This script implements DID-imputation (Borusyak, Jaravel, 
+   Spiess, 2021) for the impact of the Belt and Road Initiative
+   (BRI) on provincial trade in China, using panel data
+   and placebo tests (temporal and spatial).
+
+ Data requirements:
+   The input Stata file (data.dta) must contain at least:
+     - prvn:   province identifier (numeric or integer)
+     - year:   calendar year
+     - trade:  trade volume (outcome)
+     - export: export volume (used for missing-value filtering)
+     - import: import volume (used for missing-value filtering)
+
+ Main steps:
+   0. Load required packages
+   1. Read data and perform basic checks
+   2. Construct treatment timing (bri_year), event time (rel_year),
+      and log outcome (lntrade)
+   3. Plot descriptive trends (group-year averages)
+   4. Run DID-imputation with actual BRI timing
+   5. Temporal placebo tests (single shift and random shifts)
+   6. Spatial placebo tests (single random assignment and
+      multiple random assignments)
+
+ How to run:
+   1. Install required packages (once):
+        install.packages(c("haven", "dplyr", "ggplot2", "didimputation"))
+   2. Replace the placeholder "data.dta" path below with the
+      actual path to your Stata panel data file.
+   3. Run the script in R / RStudio / VS Code.
 ---
 
 ## **References**
